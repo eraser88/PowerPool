@@ -1,4 +1,0 @@
-== Welcome to PowerPool
-
-App to help solve the traffic problem a bit.
-
