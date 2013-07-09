@@ -5,8 +5,8 @@ $(document).ready(function () {
 
 function mapsAutoComplete() {
     var initialize = function () {
-        var source = document.getElementById("source");
-        var destination = document.getElementById("destination");
+        var source = $("#source")[0];
+        var destination = $("#destination")[0];
         new google.maps.places.Autocomplete(source);
         new google.maps.places.Autocomplete(destination);
     };
