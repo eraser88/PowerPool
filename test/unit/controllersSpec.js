@@ -5,8 +5,7 @@
 describe('controllers', function(){
   beforeEach(module('myApp.controllers'));
 
-
-  it('should ....', inject(function() {
+  it('should add source and destination to the source and destination list', inject(function() {
     //spec body
   }));
 

@@ -6,7 +6,7 @@ angular.module('myApp', [
 ]).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/home', {
-            templateUrl: 'partials/home.html', controller: 'HomeController'
+            templateUrl: 'partials/pool.html', controller: 'PoolController'
         });
         $routeProvider.otherwise({
             redirectTo: '/home'
