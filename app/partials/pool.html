@@ -1,27 +1,30 @@
 <h1>Pool</h1>
 
 <form ng-submit="addRoute(source,destination)">
-<div class="row">
-  <div class="span4"><p>Where are you leaving from ?</p>
-    <input google-map-suggest ng-model="source" type="text" size="50"/>
-  </div>
-  <div class="span4"><p>Whats your destination ?</p>
-    <input google-map-suggest ng-model="destination" type="text" size="50"/>
-  </div>
-</div>
-<div class="row">
-  <div class="span4">
-    <button id="submit" type="submit" size="50" class="btn">Submit</button>
-  </div>
-</div>
+    <div class="row">
+        <div class="span4"><p>Where are you leaving from ?</p>
+            <input google-map-suggest ng-model="source" type="text" size="50"/>
+        </div>
+        <div class="span4"><p>Whats your destination ?</p>
+            <input google-map-suggest ng-model="destination" type="text" size="50"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <button id="submit" type="submit" size="50" class="btn">Submit</button>
+        </div>
+    </div>
 </form>
 
 <h2>People are travelling to these locations:</h2>
 
 <div class="row">
-  
+
   <div ng-repeat="route in routes" class="span12" id="messagesDiv">
-    <div>{{route.source}}<em>------></em>{{route.destination}}</div>
+      <div>
+          <span>{{route.source}}<em>------></em>{{route.destination}}</span>
+          <i class="red icon-minus-sign" ng-click="removeRoute($index)"></i>
+      </div>
   </div>
 </div>
 
