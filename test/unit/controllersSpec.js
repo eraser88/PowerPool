@@ -29,7 +29,15 @@ describe('controllers', function(){
       expect(scope.routes[0].destination).toBe('end2');
   }));
 
-  it('should ....', inject(function() {
+    it('should search a route that includes the specified source and destination', inject(function($rootScope, $controller) {
+        var scope = $rootScope.$new();
+        var ctrl = $controller('HitchController', {$scope: scope});
+
+        scope.searchRoute('start', 'end');
+        expect(scope.message).toBe('Thanks for using powerpool! We are searching for possible pools in your route...');
+    }));
+
+    it('should ....', inject(function() {
     //spec body
   }));
 });

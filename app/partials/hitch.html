@@ -1,6 +1,6 @@
-<h1>Post a new Pool!</h1>
+<h1>Join a pool!</h1>
 
-<form ng-submit="addRoute(source,destination)">
+<form ng-submit="searchRoute(source,destination)">
     <div class="row">
         <div class="span4"><p>Where are you leaving from ?</p>
             <input google-map-suggest ng-model="source" type="text" size="50"/>
@@ -11,19 +11,14 @@
     </div>
     <div class="row">
         <div class="span4">
-            <button id="submit" type="submit" class="btn btn-info">Submit</button>
+            <button id="submit" type="submit" class="btn btn-success">Search</button>
         </div>
     </div>
 </form>
 
-<h2>People are travelling to these locations:</h2>
-
 <div class="row">
-
-    <div ng-repeat="route in routes" class="span12" id="messagesDiv">
-        <div>
-            <span>{{route.source}}<em>------></em>{{route.destination}}</span>
-            <i class="red icon-minus-sign" ng-click="removeRoute($index)"></i>
-        </div>
+    <div class="span12" id="searchResult">
+        <h3> {{ message }} </h3>
     </div>
 </div>
+
